@@ -49,7 +49,7 @@ const Home = () => {
       {/* test images */}
       <div className='flex flex-col md:flex-row justify-between ml-4 md:ml-20 my-16'>
         <div className='m-auto mb-8 md:mb-0'>
-          <img className='rounded-full w-[500px] h-[250px]' src={Test1} alt="" />
+          <img className='rounded-full w-[250px] h-[250px]' src={Test1} alt="" />
           <div>
             <p className="flex font-semibold ml-2 md:ml-6 py-4">Live Tests
               for Real Exam <br /> Experience</p>
@@ -59,7 +59,7 @@ const Home = () => {
         </div>
 
         <div className='md:ml-64 mb-8 md:mb-0'>
-          <img className='rounded-full w-full md:w-[250px] h-[250px]' src={Test2} alt="" />
+          <img className='rounded-full  md:w-[250px] h-[250px]' src={Test2} alt="" />
           <div>
             <p className="flex font-semibold ml-2 md:ml-6 mt-4">Detailed
               Score Analysis</p>
@@ -68,7 +68,7 @@ const Home = () => {
           </div>
         </div>
         <div className='md:ml-32'>
-          <img className='rounded-full w-full md:w-[250px] h-[250px]' src={Test3} alt="" />
+          <img className='rounded-full  md:w-[250px] h-[250px]' src={Test3} alt="" />
           <div className=''>
             <p className="flex font-semibold ml-2 md:ml-6 mt-4">Learn from
               the Best</p>
