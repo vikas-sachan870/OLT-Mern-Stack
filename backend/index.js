@@ -2,10 +2,10 @@ const express = require("express");
 const cors = require('cors')
 const app = express();
 app.use(express.json());
-// const corsOptions = {
-//   origin: /\.onrender\.com$/,
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",};
-app.use(cors());
+const corsOptions = {
+  origin: /\.onrender\.com$/,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",};
+app.use(cors(corsOptions));
 // Ensure your database connection file is correctly set up
 require("./conn/conn");
 // Import the user routes

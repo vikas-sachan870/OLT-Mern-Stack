@@ -12,7 +12,7 @@ const SideBar = () => {
         const fetchSubjects = async () => {
             try {
                 const response = await axios.get(
-                    "http://localhost:1000/api/v1/quiz/fetch-subject"
+                    "https://olt-mern-stack.onrender.com/api/v1/quiz/fetch-subject"
                 );
                 const subjectsData = response.data;
                 setSubjects(subjectsData); 
@@ -30,7 +30,7 @@ const SideBar = () => {
     const handleSubjectClick = async (subject) => {
         try {
             const response = await axios.get(
-                `http://localhost:1000/api/v1/quiz/fetch-topic/${subject}`
+                `https://olt-mern-stack.onrender.com/api/v1/quiz/fetch-topic/${subject}`
             );
             
             setTopics(response.data); 

@@ -24,7 +24,7 @@ const AllQuiz = () => {
 
   const fetchQuizzes = async () => {
     try {
-      const response = await axios.get("http://localhost:1000/api/v1/quiz/all-quiz");
+      const response = await axios.get("https://olt-mern-stack.onrender.com/api/v1/quiz/all-quiz");
       setQuizzes(response.data);
     } catch (error) {
       console.error('Error fetching quizzes:', error);
@@ -33,7 +33,7 @@ const AllQuiz = () => {
 
   const deleteQuiz = async (id) => {
     try {
-      await axios.delete(`http://localhost:1000/api/v1/quiz/delete-quiz/${id}`);
+      await axios.delete(`https://olt-mern-stack.onrender.com/api/v1/quiz/delete-quiz/${id}`);
       setQuizzes(quizzes.filter((quiz) => quiz._id !== id));
     } catch (error) {
       console.error('Error deleting quiz:', error);
@@ -62,7 +62,7 @@ const AllQuiz = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:1000/api/v1/quiz-update/${editQuiz}`, formData);
+      const response = await axios.put(`https://olt-mern-stack.onrender.com/api/v1/quiz-update/${editQuiz}`, formData);
       setQuizzes(quizzes.map((quiz) => (quiz._id === editQuiz ? response.data : quiz)));
       setEditQuiz(null);
       setFormData({
