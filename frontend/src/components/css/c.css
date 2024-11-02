@@ -1,0 +1,11 @@
+.correct{
+    background: #dffff2;
+    border-color: #00d397;
+    outline-offset: 5px;
+}
+
+.wrong{
+    background: #ffebeb;
+    outline-offset: 5px;
+    outline-color: #ff4a4a;
+}
