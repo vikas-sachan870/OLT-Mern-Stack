@@ -23,7 +23,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:1000/api/v1/login", {
+      const response = await axios.post("https://olt-mern-stack-1.onrender.com/login", {
         email,
         password,
       });

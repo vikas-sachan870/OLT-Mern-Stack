@@ -20,7 +20,7 @@ const Result = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:1000/api/v1/results/${userId}`
+          `https://olt-mern-stack-1.onrender.com/results/${userId}`
         );
         setResults(response.data.results);
       } catch (err) {

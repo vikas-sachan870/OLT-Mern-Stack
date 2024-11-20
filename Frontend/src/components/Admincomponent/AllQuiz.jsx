@@ -30,7 +30,7 @@ const AllQuiz = () => {
 
   const fetchQuizzes = async () => {
     try {
-      const response = await axios.get("http://localhost:1000/api/v1/quiz/all-quiz", {
+      const response = await axios.get("https://olt-mern-stack-1.onrender.com/quiz/all-quiz", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -44,7 +44,7 @@ const AllQuiz = () => {
 
   const deleteQuiz = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:1000/api/v1/quiz/delete-quiz/${id}`, {
+      const response = await axios.delete(`https://olt-mern-stack-1.onrender.com/quiz/delete-quiz/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the Authorization header
         },
@@ -79,7 +79,7 @@ const AllQuiz = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:1000/api/v1/quiz-update/${editQuiz}`, formData, {
+      const response = await axios.put(`https://olt-mern-stack-1.onrender.com/quiz-update/${editQuiz}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

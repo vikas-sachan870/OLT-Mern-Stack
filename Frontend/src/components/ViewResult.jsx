@@ -14,7 +14,7 @@ const ViewResult = () => {
     
     const fetchResult = async () => {
       try {
-        const response = await axios.get(`http://localhost:1000/api/v1/result/oneresult/${resultId}`);
+        const response = await axios.get(`https://olt-mern-stack-1.onrender.com/result/oneresult/${resultId}`);
         setResult(response.data.result);
       } catch (err) {
         setError(err.message);

@@ -15,7 +15,7 @@ const SignUp = () => {
   const handleSubmit = (event) => {
       event.preventDefault();
       
-      axios.post( "http://localhost:1000/api/v1/register", {name, email, password})
+      axios.post( "https://olt-mern-stack-1.onrender.com/register", {name, email, password})
       .then(result => {
           console.log(result);
           if(result.data === "User already exists Please login"){

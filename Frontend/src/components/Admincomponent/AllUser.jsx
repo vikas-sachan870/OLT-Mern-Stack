@@ -24,7 +24,7 @@ const AllUser = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:1000/api/v1/all-user",{
+      const response = await axios.get("https://olt-mern-stack-1.onrender.com/all-user",{
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the Authorization header
         },
@@ -38,7 +38,7 @@ const AllUser = () => {
 
   const handleDeleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:1000/api/v1/delete-user/${userId}`,{
+      await axios.delete(`https://olt-mern-stack-1.onrender.com/delete-user/${userId}`,{
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the Authorization header
         },
@@ -62,7 +62,7 @@ const AllUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:1000/api/v1/update-user/${selectedUser._id}`, formData);
+      await axios.put(`https://olt-mern-stack-1.onrender.com/update-user/${selectedUser._id}`, formData);
       setShowModal(false);
       fetchUsers();
     } catch (error) {
