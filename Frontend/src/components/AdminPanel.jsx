@@ -75,7 +75,7 @@ const AdminPanel = () => {
             questions
         };
         console.log(quizDetails);
-        axios.post("https://olt-mern-stack-1.onrender.com/quiz/createquiz", quizDetails)
+        axios.post("https://olt-mern-stack-1.onrender.com/api/v1/quiz/createquiz", quizDetails)
             .then(result => {
                 console.log(result);
             })

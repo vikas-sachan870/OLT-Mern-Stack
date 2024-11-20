@@ -61,7 +61,7 @@ const AddQuiz = () => {
     };
 
     try {
-      const response = await axios.post("https://olt-mern-stack-1.onrender.com/quiz/createquiz", quizDetails);
+      const response = await axios.post("https://olt-mern-stack-1.onrender.com/api/v1/quiz/createquiz", quizDetails);
       console.log(response.data);
       // Optionally reset form fields or perform other actions upon successful submission
     } catch (error) {

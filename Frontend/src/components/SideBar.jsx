@@ -12,7 +12,7 @@ const SideBar = () => {
         const fetchSubjects = async () => {
             try {
                 const response = await axios.get(
-                    "https://olt-mern-stack-1.onrender.com/quiz/fetch-subject"
+                    "https://olt-mern-stack-1.onrender.com/api/v1/quiz/fetch-subject"
                 );
                 const subjectsData = response.data;
                 setSubjects(subjectsData); 
@@ -31,7 +31,7 @@ const SideBar = () => {
         setSelectedSubject(subject); // Update the selected subject
         try {
             const response = await axios.get(
-                `https://olt-mern-stack-1.onrender.com/quiz/fetch-topic/${subject}`
+                `https://olt-mern-stack-1.onrender.com/api/v1/quiz/fetch-topic/${subject}`
             );
             setTopics(response.data); 
         } catch (error) {

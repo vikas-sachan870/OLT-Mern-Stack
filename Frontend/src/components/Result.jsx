@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import NavBar from "./NavBar";
@@ -20,7 +20,7 @@ const Result = () => {
 
       try {
         const response = await axios.get(
-          `https://olt-mern-stack-1.onrender.com/results/${userId}`
+          `https://olt-mern-stack-1.onrender.com/api/v1/results/${userId}`
         );
         setResults(response.data.results);
       } catch (err) {
