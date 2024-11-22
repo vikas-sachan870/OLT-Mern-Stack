@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import Loader from "./Loader";
 
 const QuizStart = () => {
   let navigate = useNavigate();
@@ -147,7 +148,7 @@ const QuizStart = () => {
   };
 
   // Show loading state until quiz data is loaded
-  if (!quizData) return <div>Loading...</div>;
+  if (!quizData) return <Loader></Loader>;
 
   return (
     <div

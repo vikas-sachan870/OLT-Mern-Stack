@@ -2,6 +2,8 @@ import  { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import NavBar from "./NavBar";
+import Loader from "./Loader";
+import ErrorPage from "./ErrorPage";
 
 const Result = () => {
   const [results, setResults] = useState([]);
@@ -34,11 +36,11 @@ const Result = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <ErrorPage/>;
   }
 
   if (results.length === 0) {

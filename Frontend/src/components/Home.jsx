@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import Image from '../image/homeImage.svg';
 import Typed from 'typed.js';
 import Test1 from '../image/test1.jpg';

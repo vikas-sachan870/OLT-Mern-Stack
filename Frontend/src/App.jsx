@@ -26,6 +26,7 @@ import AllUser from "./components/Admincomponent/AllUser";
 import AddQuiz from "./components/Admincomponent/AddQuiz";
 import Result from "./components/Result";
 import ViewResult from "./components/ViewResult";
+import CameraCapture from "./components/CameraCapture";
 
 export const UserContext = createContext();
 
@@ -58,6 +59,7 @@ const App = () => {
               <Route path="/" element={<Home />}></Route>
               <Route path="/result" element={<Result/>}></Route>
               <Route path="/result/myresult/:resultId" element={<ViewResult/>}></Route>
+              <Route path="/camera" element={<CameraCapture/>}></Route>
 
               {role === "admin" && (
                 <>

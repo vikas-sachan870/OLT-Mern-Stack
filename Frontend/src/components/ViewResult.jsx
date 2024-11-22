@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import NavBar from './NavBar';
+import Loader from './Loader';
+import ErrorPage from './ErrorPage';
 
 const ViewResult = () => {
   const { resultId } = useParams(); 
@@ -27,11 +29,11 @@ const ViewResult = () => {
   }, [resultId]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <ErrorPage/>;
   }
 
   if (!result || !result.quiz) {
