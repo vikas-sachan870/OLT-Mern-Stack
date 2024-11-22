@@ -1,4 +1,5 @@
-import React, { useState ,useNavigate} from 'react';
+/* eslint-disable no-unused-vars */
+import  { useState ,useNavigate} from 'react';
 import axios from 'axios';
 
 const AddQuiz = () => {

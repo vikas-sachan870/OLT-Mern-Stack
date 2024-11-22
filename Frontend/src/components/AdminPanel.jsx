@@ -65,6 +65,8 @@ const AdminPanel = () => {
         setQuestions(newQuestions);
     };
 
+    const totaluser=axios.get("https://olt-mern-stack-1.onrender.com/api/v1/nofuser");
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const quizDetails = {
@@ -96,7 +98,7 @@ const AdminPanel = () => {
                                     </div>
                                 </div>
                                 <h1 className='text-4xl font-semibold text-center mb-5'>
-                                    8<br />Total Users
+                                    {totaluser}<br />Total Users
                                 </h1>
                             </div>
                         </a>
