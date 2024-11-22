@@ -138,4 +138,20 @@ router.get("/getresult/:id", async (req, res) => {
     return res.status(500).json({ message: 'Server error', error: err.message });
   }
 });
+
+router.get("/nofuser",async (req,res)=>
+{
+  try{
+const totaluser= await User.length;
+if(!totaluser)
+{
+  return res.status(404).json({ message: 'Error' });
+}
+
+return res.status(200).json(totaluser)
+  }
+  catch(err){
+    return res.status(404).json({message:'Server Error'});
+  }
+})
 module.exports = router;
