@@ -1,6 +1,6 @@
-import React, { createContext, useReducer, useEffect, useState } from "react";
+import  { createContext, useReducer, useEffect, useState } from "react";
 import './App.css'
-import NavBar from './components/NavBar'
+
 import Home from "./components/Home";
 import "bootstrap/dist/css/bootstrap.min.css"
 import { initialState, reducer } from "./reducer/UseReducer";

@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from '../image/homeImage.svg';
 import Typed from 'typed.js';
 import Test1 from '../image/test1.jpg';
@@ -8,7 +8,6 @@ import Gif from '../image/fast-forward.gif';
 import NavBar from './NavBar';
 
 const Home = () => {
-
   useEffect(() => {
     document.title = 'Home';
   }, []);
@@ -17,12 +16,17 @@ const Home = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Please Login", "To See More Content", "Thank You", "For Visiting Our Website"],
+      strings: [
+        "Please Login",
+        "To See More Content",
+        "Thank You",
+        "For Visiting Our Website",
+      ],
       startDelay: 200,
       typeSpeed: 120,
       backSpeed: 20,
       backDelay: 100,
-      loop: true
+      loop: true,
     });
 
     return () => {
@@ -33,66 +37,100 @@ const Home = () => {
   return (
     <>
       <NavBar />
-      <div className='flex flex-col md:flex-row mt-24 justify-center items-center'>
-        {/* first */}
-        <div className='mx-4 md:mx-40 mt-16 px-4 md:px-10 text-center md:text-left'>
-          <h1 className='text-xl md:text-3xl'>Hi User!</h1>
-          <h1 className='text-xl md:text-3xl'>Welcome to Online Learning</h1>
-          <h1 className='text-xl md:text-3xl'><span className='font-serif' ref={el}></span></h1>
+      <div className="flex flex-col md:flex-row mt-20 justify-center items-center gap-8">
+        {/* Text Section */}
+        <div className="text-center md:text-left px-6 md:px-12">
+          <h1 className="text-2xl md:text-4xl font-semibold">Hi User!</h1>
+          <h2 className="text-2xl md:text-4xl font-semibold">Welcome to Online Learning</h2>
+          <h3 className="text-xl md:text-3xl font-serif mt-2">
+            <span ref={el}></span>
+          </h3>
         </div>
-        {/* second */}
-        <div className='w-64 md:w-96 mx-4 md:mx-20 mt-8 md:mt-0'>
-          <img className='' src={Image} alt="Error" />
+
+        {/* Image Section */}
+        <div className="w-64 md:w-96">
+          <img src={Image} alt="Welcome" />
         </div>
       </div>
 
-      {/* test images */}
-      <div className='flex flex-col md:flex-row justify-between ml-4 md:ml-20 my-16'>
-        <div className='m-auto mb-8 md:mb-0'>
-          <img className='rounded-full w-full md:w-[500px] h-[250px]' src={Test1} alt="" />
-          <div>
-            <p className="flex font-semibold ml-2 md:ml-6 py-4">Live Tests
-              for Real Exam <br /> Experience</p>
-            <p className='flex ml-2 md:ml-6'>Feel the thrill of a real exam.
-              Improve your time & <br />pressure management skills</p>
-          </div>
+      {/* Test Features Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 my-16">
+        {/* Feature 1 */}
+        <div className="flex flex-col items-center text-center">
+          <img
+            className="rounded-full  h-[250px]"
+            src={Test1}
+            alt="Live Tests"
+          />
+          <p className="text-xl font-bold mt-4">Live Tests for Real Exam Experience</p>
+          <p className="text-sm md:text-base mt-2">
+            Feel the thrill of a real exam. Improve your time & pressure management skills.
+          </p>
         </div>
 
-        <div className='md:ml-64 mb-8 md:mb-0'>
-          <img className='rounded-full w-full md:w-[250px] h-[250px]' src={Test2} alt="" />
-          <div>
-            <p className="flex font-semibold ml-2 md:ml-6 mt-4">Detailed
-              Score Analysis</p>
-            <p className='flex w-full md:w-1/2 ml-2 md:ml-6'>Get a detailed breakdown of your
-              strengths & weaknesses and discover insights to improve your score</p>
-          </div>
+        {/* Feature 2 */}
+        <div className="flex flex-col items-center text-center">
+          <img
+            className="rounded-full w-[250px] h-[250px]"
+            src={Test2}
+            alt="Score Analysis"
+          />
+          <p className="text-xl font-bold mt-4">Detailed Score Analysis</p>
+          <p className="text-sm md:text-base mt-2">
+            Get a detailed breakdown of your strengths & weaknesses and discover insights to improve your score.
+          </p>
         </div>
-        <div className='md:ml-32'>
-          <img className='rounded-full w-full md:w-[250px] h-[250px]' src={Test3} alt="" />
-          <div className=''>
-            <p className="flex font-semibold ml-2 md:ml-6 mt-4">Learn from
-              the Best</p>
-            <p className='flex w-full md:w-1/2 ml-2 md:ml-6'>Learn from the best material of the
-              subject, in the most engaging yet simplified ways</p>
-          </div>
+
+        {/* Feature 3 */}
+        <div className="flex flex-col items-center text-center">
+          <img
+            className="rounded-full w-[250px] h-[250px]"
+            src={Test3}
+            alt="Learn from Best"
+          />
+          <p className="text-xl font-bold mt-4">Learn from the Best</p>
+          <p className="text-sm md:text-base mt-2">
+            Learn from the best material of the subject in the most engaging yet simplified ways.
+          </p>
         </div>
       </div>
 
-      <div>
-        <p className='font-bold text-2xl md:text-3xl text-center pb-6'>One Destination for Complete Exam Preparation</p>
-      </div>
-      <div>
-        <div className='flex flex-col items-center'>
-          <p className='text-xl md:text-2xl flex pb-8'>Learn <img className='w-[25px] h-[20px] mt-2 mx-1' src={Gif} alt="" /> Practice <img className='w-[25px] h-[20px] mt-2 mx-1' src={Gif} alt="" /> Improve <img className='w-[25px] h-[20px] mt-2 mx-1' src={Gif} alt="" /> Succeed </p>
+      {/* Slogan Section */}
+      <div className="text-center">
+        <p className="text-2xl md:text-3xl font-bold pb-6">
+          One Destination for Complete Exam Preparation
+        </p>
+        <div className="flex justify-center items-center text-xl md:text-2xl">
+          <span>Learn</span>
+          <img
+            className="w-[25px] h-[20px] mx-1"
+            src={Gif}
+            alt="fast-forward"
+          />
+          <span>Practice</span>
+          <img
+            className="w-[25px] h-[20px] mx-1"
+            src={Gif}
+            alt="fast-forward"
+          />
+          <span>Improve</span>
+          <img
+            className="w-[25px] h-[20px] mx-1"
+            src={Gif}
+            alt="fast-forward"
+          />
+          <span>Succeed</span>
         </div>
       </div>
 
-      {/* footer */}
-      <div className='bg-black text-white py-4'>
-        <p className='text-center'>Copyright <i className="fa-regular fa-copyright"></i> 2023 : OLT Website</p>
-      </div>
+      {/* Footer */}
+      <footer className="bg-black text-white py-4 text-center">
+        <p>
+          Copyright &copy; 2023 : OLT Website
+        </p>
+      </footer>
     </>
   );
-}
+};
 
 export default Home;

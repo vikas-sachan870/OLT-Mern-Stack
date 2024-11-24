@@ -65,7 +65,7 @@ const AdminPanel = () => {
         setQuestions(newQuestions);
     };
 
-    const totaluser=axios.get("https://olt-mern-stack-1.onrender.com/api/v1/nofuser");
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -98,7 +98,7 @@ const AdminPanel = () => {
                                     </div>
                                 </div>
                                 <h1 className='text-4xl font-semibold text-center mb-5'>
-                                    {totaluser}<br />Total Users
+                                    5<br />Total Users
                                 </h1>
                             </div>
                         </a>
